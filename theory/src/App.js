@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Car from "./Car/Car";
 
 class App extends Component {
   render() {
-
-  // return (
-    // <div className="App">
-    //  <h1>Hello World</h1>
-    // </div>
-    return React.createElement(
-      'div',
-      null,
-      'h1',   
-      'Hello world!'
-    )
+    const divStyle = {
+      textAlign: "center"
+    };
+    return (
+      <div style={divStyle}>
+        <h1>Hello World</h1>
+        <Car />
+      </div>
+    );
   }
 }
+
 export default App;

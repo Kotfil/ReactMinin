@@ -6,3 +6,4 @@ export default () => (
     <p>Number:<strong> {Math.round(Math.random() * 100)}</strong></p>
   </div>
 );
+//13

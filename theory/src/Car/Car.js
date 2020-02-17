@@ -1,30 +1,43 @@
 import React from 'react'
 import './Car.css'
-import Radium from 'radium'
+//import Radium from 'radium'
+import classes from './Car'
 
 class Car extends React.Component {
 
-  componentWillReceiveProps(nextProps) {
-    console.log('Car componentWillReceiveProps', nextProps)
-  }
+    componentWillReceiveProps(nextProps) {
+        console.log('Car componentWillReceiveProps', nextProps)
+      }
+    
+      shouldComponentUpdate(nextProps, nextState) {
+        console.log('Car shouldComponentUpdate',nextState, nextProps)
+        return nextProps.name.trim() !== this.props.name.trim()
+      }
+    
+      componentWillUpdate(nextProps, nextState) {
+        console.log('Car componentWillUpdate', nextProps,nextState)
+      }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log('Car shouldComponentUpdate',nextState, nextProps)
-    return true
-  }
+    //   static getDerivedStateFromProps(nextProps, prevState) {
+    //         console.log('Car getDerivedStateFromProps',nextProps, prevState)
+    //     return prevState
 
-  componentWillUpdate(nextProps, nextState) {
-    console.log('Car componentWillUpdate', nextProps,nextState)
-  }
-
-  componentDidUpdate() {
-    console.log('Car componentDidUpdate',)
-  }
-
+    //     }
+        
+      
+    
+      componentDidUpdate() {
+        console.log('Car componentDidUpdate',)
+      }
+    //   getSnapshotBeforeUpdate(){
+    //       console.log('Car getSnapshotBeforeUpdate')
+    //   }
+    
+      componentWillUnmount() {
+          console.log('Car componentWillUnmount')
+      }
   render() {
-    console.log('Car render')
-    const inputClasses = [classes.input]
-  const inputClasses = ['input']
+   const inputClasses = [classes.input]
 
   if (this.props.name !== '') {
     inputClasses.push('green')
@@ -45,7 +58,8 @@ class Car extends React.Component {
     }
   }
   
-  return (  <div className="Car" style={style}>
+  return (  
+  <div className={classes.Car} style={style}>
   <h3>Сar name: {this.props.name}</h3>
   <p>Year: <strong>{this.props.year}</strong></p>
   <input 

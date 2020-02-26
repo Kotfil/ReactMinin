@@ -1,14 +1,37 @@
 import React, {Component} from 'react'
-import Layout from './hoc/Layout/Layout'
-import Quiz from './containers/Quiz/Quiz'
+import './App.scss'
+import {Route} from 'react-router-dom'
+import About from './About/About'
+import Cars from './Cars/Cars'
 
 class App extends Component {
   render() {
+
     return (
-      <Layout>
-        <Quiz />
-      </Layout>
-    )
+      <div>
+        <nav className="nav">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/cars">Cars</a>
+            </li>
+          </ul>
+        </nav>
+
+        <hr/>
+
+        {/*localhost:3000*/}
+        <Route path="/" exact render={() => <h1>Home Page</h1>} />
+        <Route path="/about" component={About} />
+        <Route path="/cars" component={Cars} />
+
+      </div>
+    );
   }
 }
 

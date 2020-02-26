@@ -1,37 +1,23 @@
 import React, {Component} from 'react'
-import './App.scss'
-import {Route} from 'react-router-dom'
-import About from './About/About'
-import Cars from './Cars/Cars'
+import Layout from './hoc/Layout/Layout'
+import {Route, Switch} from 'react-router-dom'
+import Quiz from './containers/Quiz/Quiz'
+import QuizList from './containers/QuizList/QuizList'
+import Auth from './containers/Auth/Auth'
+import QuizCreator from './containers/QuizCreator/QuizCreator'
 
 class App extends Component {
   render() {
-
     return (
-      <div>
-        <nav className="nav">
-          <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/cars">Cars</a>
-            </li>
-          </ul>
-        </nav>
-
-        <hr/>
-
-        {/*localhost:3000*/}
-        <Route path="/" exact render={() => <h1>Home Page</h1>} />
-        <Route path="/about" component={About} />
-        <Route path="/cars" component={Cars} />
-
-      </div>
-    );
+      <Layout>
+        <Switch>
+          <Route path="/auth" component={Auth} />
+          <Route path="/quiz-creator" component={QuizCreator} />
+          <Route path="/quiz/:id" component={Quiz} />
+          <Route path="/" component={QuizList} />
+        </Switch>
+      </Layout>
+    )
   }
 }
 

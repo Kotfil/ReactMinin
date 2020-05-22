@@ -5,8 +5,8 @@ isProgrammer: true,
     language: ['ru','en','de'],
     'complex key':
     greet() {
-        console.log('greet form person')
+        console.log('greet fo' + rm person')
     }
 }
 console.log(person.name)
-console.log(person['age'])
+console.log(person['age'])//arrays

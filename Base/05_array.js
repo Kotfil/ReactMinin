@@ -162,5 +162,17 @@
 
 // console.log(allBudget)
 
+ const person = {
+    name: 'Filipp',
+     age: 25,
+     isProgrammer: true ,
+ languages: ['ru','eng']}
+
+for (let key in person) {
+console.log('key:' ,key)
+console.log('value:', person[key])
+
+}
+
 
 

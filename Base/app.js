@@ -1,14 +1,29 @@
 const person = {
     name: 'Filipp',
-    age: 23,
-isProgrammer: true,
-    language: ['ru','en','de'],
-    'complex key':
+    age: undefined,
+    isProgrammer: true,
+    language: ['ru', 'en', 'de'],
+    // 'complex key': 'Complex Key',
     greet() {
-        console.log('greet fo' + rm person')
+    console.log('greet fo person')},
+    info() {
+
+        console.log('this:', this)
+        console.log('Информация про человека:', this.name)
     }
 }
-console.log(person.name)
-console.log(person['age'])//arrays
+person.info()
+// const keys = Object.keys(person)
+// keys.forEach((key) => {
+//     console.log()
+// })
 
-console.log(person.isProgrammer)
+//context
+const logger = {
+    keys() {
+        console.log(Object.keys(this))
+    }
+}
+
+logger.keys(person)
+console.log()

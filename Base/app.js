@@ -10,3 +10,5 @@ isProgrammer: true,
 }
 console.log(person.name)
 console.log(person['age'])//arrays
+
+console.log(person.isProgrammer)

@@ -39,6 +39,23 @@ const person = {
         console.log('greet fo person')
     }
 }
+//context
+const logger = {
+    keys() {
+        console.log('Object Keys', Object.keys(this))
+    }
+}
+
+keysAndValues() {
+    Object.keys(this).forEach(key =>
+        console.log(${person}))
+}
+
+// const bound = logger.keys.bind(person)
+// bound()
+// logger.keys.call(person)
+
+
 // console.log(person.name)
 // const ageKey = 'age'
 // console.log(person[ageKey])
@@ -56,6 +73,7 @@ const person = {
 // const name = person.name
 // const age = person.age
 // const languaes = person.languages
-const {name,age,languaes} = person
-
-console.log(name,age,languaes)
+// const {name,age,languaes} = person
+//
+// console.log(name,age,languaes)
+//next Obj

@@ -1,5 +1,5 @@
-const citiesUkraine = ['Kiev', 'Kharkiv', 'Lviv', 'Odessa']
-const citiesPoland = ['Krakov', 'Warshaw', 'Poznan', 'Gdansk']
+// const citiesUkraine = ['Kiev', 'Kharkiv', 'Lviv', 'Odessa']
+// const citiesPoland = ['Krakov', 'Warshaw', 'Poznan', 'Gdansk']
 
 //Spread
 // console.log(...citiesUkraine)
@@ -28,13 +28,13 @@ const citiesPoland = ['Krakov', 'Warshaw', 'Poznan', 'Gdansk']
 // }
 // console.log(a(...numbers))
 
-const person = {
-    name: 'max',
-    age: 22,
-    adress: 'obolon',
-    country: 'kiev'
-}
-
-const {name,age, ...adress} = person
-
-console.log(name,age,adress)
+// const person = {
+//     name: 'max',
+//     age: 22,
+//     adress: 'obolon',
+//     country: 'kiev'
+// }
+//
+// const {name,age, ...adress} = person
+//
+// console.log(name,age,adress)

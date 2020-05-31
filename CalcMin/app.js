@@ -33,5 +33,5 @@ document.addEventListener('DOMContentLoaded', () => {
     subBtn.addEventListener('click', subHandler)
 
 })
-
+console.log('auto')
 
